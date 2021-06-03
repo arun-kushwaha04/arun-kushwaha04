@@ -17,7 +17,7 @@ Here are some ideas to get you started:
 
 ##### Andorid Development Enthusiast || Web Development Enthusiast
 
-Skills: React / Kotlin / Node JS / Express / JS / C++ / HTML / CSS
+Skills: React JS / Kotlin / Node JS / Express / JS / C++ / HTML / CSS
 <div align="center">
  
 ![GitHub stats](https://github-readme-stats.vercel.app/api?username=arun-kushwaha04&show_icons=true) 
