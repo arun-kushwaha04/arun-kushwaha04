@@ -1,4 +1,4 @@
-### Hi there 👋
+### Hi there 👋, myself Arun Singh Kushwaha
 
 <!--
 **arun-kushwaha04/arun-kushwaha04** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -14,3 +14,21 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+##### Andorid Development Enthusiast || Web Development Enthusiast
+
+Skills: React / Kotlin / Node JS / Express / JS / C++ / HTML / CSS
+<div align="center">
+ 
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=arun-kushwaha04&show_icons=true) 
+<!--  ![GitHub streak stats](https://github-readme-streak-stats.herokuapp.com/?user=kailash360)   -->
+
+![GitHub Activity Graph](https://activity-graph.herokuapp.com/graph?username=arun-kushwaha04)
+ 
+ [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=arun-kushwaha04)](https://github.com/anuraghazra/github-readme-stats)
+  
+ </div>
+ 
+  ## ✨ To see my React projects, click <a href="https://github.com/arun-kushwaha04/React-Project.git">here</a> ✨</p>
+  
+ ![Profile views](https://gpvc.arturio.dev/arun-kushwaha04)  
