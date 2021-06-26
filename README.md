@@ -24,9 +24,10 @@ Skills: React JS / Kotlin / Node JS / Express / JS / C++ / HTML / CSS
 <!--  ![GitHub streak stats](https://github-readme-streak-stats.herokuapp.com/?user=kailash360)   -->
 
 ![GitHub Activity Graph](https://activity-graph.herokuapp.com/graph?username=arun-kushwaha04)
+
  
- [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=arun-kushwaha04)](https://github.com/anuraghazra/github-readme-stats)
-  
+ <a href="https://github.com/vishwas031/github-readme-activity-graph"><img alt="Arun Singh Kushwaha's Activity Graph" src="https://activity-graph.herokuapp.com/graph?username=arun-kushwaha04&bg_color=0D1117&color=5BCDEC&line=5BCDEC&point=FFFFFF&hide_border=true" /></a>
+ 
  </div>
  
   ## ✨ To see my React projects, click <a href="https://github.com/arun-kushwaha04/React-Project.git">here</a> ✨</p>
