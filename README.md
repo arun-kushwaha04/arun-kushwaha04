@@ -3,7 +3,7 @@
  ## 🙋‍♂️ About Me
 
 
-- 🌱 I’m currently learning **React JS**
+- 🌱 I’m currently learning **Flutter**
  
 - 🔥 I'm also enhancing myself in the field of **Competative Programming**
 
@@ -11,7 +11,7 @@
 
 - 📫 How to reach me **arunkushwaha89765@gmail.com**
 
- ##### <h3 align="center"> Andorid Development Enthusiast || Web Development Enthusiast </h3>
+ ##### <h3 align="center"> Android Development Enthusiast || Web Development Enthusiast </h3>
  <br>
  <h2 align="center">My Skills</h2>
  <p align="center"> 
