@@ -51,7 +51,7 @@
 <br/>
 <br/>
 
-<a href="https://github.com/karun-kushwaha04/github-readme-activity-graph"><img alt="Arun Kushwaha's Activity Graph" src="https://activity-graph.herokuapp.com/graph?username=arun-kushwaha04&bg_color=0D1117&color=5BCDEC&line=5BCDEC&point=FFFFFF&hide_border=true" /></a>
+<a href="https://github.com/arun-kushwaha04/github-readme-activity-graph"><img alt="Arun Kushwaha's Activity Graph" src="https://activity-graph.herokuapp.com/graph?username=arun-kushwaha04&bg_color=0D1117&color=5BCDEC&line=5BCDEC&point=FFFFFF&hide_border=true" /></a>
 
  ![trophy](https://github-profile-trophy.vercel.app/?username=arun-kushwaha04&row=1&no-bg=true)
 
