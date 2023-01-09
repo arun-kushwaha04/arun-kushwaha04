@@ -3,9 +3,9 @@
  ## 🙋‍♂️ About Me
 
 
-- 🌱 I’m currently learning **Flutter**
+- 🌱 I’m currently learning **Ktor**
  
-- 🔥 I'm also enhancing myself in the field of **Competative Programming**
+- 🔥 I'm also improving my **DSA** and promlem solving skills.
 
 - 👯 I’m looking to collaborate on **OpenSource Projects**
 
@@ -55,6 +55,8 @@
 
  ![trophy](https://github-profile-trophy.vercel.app/?username=arun-kushwaha04&row=1&no-bg=true)
 
+ <!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
  
 <br/>
 <br/>
