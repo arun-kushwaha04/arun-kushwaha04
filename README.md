@@ -5,7 +5,7 @@
 
 - 🌱 I’m currently learning **Ktor**
  
-- 🔥 I'm also improving my **DSA** and promlem solving skills.
+- 🔥 I'm also improving my **DSA** and promblem solving skills.
 
 - 👯 I’m looking to collaborate on **OpenSource Projects**
 
