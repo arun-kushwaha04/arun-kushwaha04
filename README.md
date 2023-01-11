@@ -56,6 +56,16 @@
  ![trophy](https://github-profile-trophy.vercel.app/?username=arun-kushwaha04&row=1&no-bg=true)
 
  <!--START_SECTION:waka-->
+
+```text
+JavaScript   2 hrs 41 mins   █████████████████████░░░░   84.00 %
+Docker       10 mins         █▒░░░░░░░░░░░░░░░░░░░░░░░   05.54 %
+TypeScript   7 mins          █░░░░░░░░░░░░░░░░░░░░░░░░   03.86 %
+Text         6 mins          █░░░░░░░░░░░░░░░░░░░░░░░░   03.55 %
+Git Config   3 mins          ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.84 %
+JSON         1 min           ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.97 %
+```
+
 <!--END_SECTION:waka-->
  
 <br/>
