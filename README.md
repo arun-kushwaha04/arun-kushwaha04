@@ -59,8 +59,9 @@
  <!--START_SECTION:waka-->
 
 ```text
-JavaScript   13 hrs 45 mins  ███████████████▒░░░░░░░░░   60.75 %
-Other        4 hrs 18 mins   ████▓░░░░░░░░░░░░░░░░░░░░   19.01 %
+JavaScript   9 hrs 57 mins   ████████████████░░░░░░░░░   64.01 %
+Solidity     1 hr 35 mins    ██▓░░░░░░░░░░░░░░░░░░░░░░   10.21 %
+Other        1 hr 4 mins     █▓░░░░░░░░░░░░░░░░░░░░░░░   06.88 %
 ```
 
 <!--END_SECTION:waka-->
