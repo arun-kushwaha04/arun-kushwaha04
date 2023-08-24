@@ -59,11 +59,11 @@
  <!--START_SECTION:waka-->
 
 ```txt
-JavaScript       6 hrs 34 mins   ████████████████░░░░░░░░░   63.46 %
-Assembly         1 hr 41 mins    ████░░░░░░░░░░░░░░░░░░░░░   16.37 %
-TSQL             1 hr 19 mins    ███▒░░░░░░░░░░░░░░░░░░░░░   12.70 %
-Python           23 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   03.70 %
-ActionScript 3   9 mins          ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.58 %
+JavaScript       5 hrs 52 mins   ███████████████▓░░░░░░░░░   63.33 %
+Assembly         1 hr 41 mins    ████▓░░░░░░░░░░░░░░░░░░░░   18.28 %
+TSQL             1 hr 19 mins    ███▓░░░░░░░░░░░░░░░░░░░░░   14.19 %
+ActionScript 3   9 mins          ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.77 %
+Ezhil            7 mins          ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.29 %
 ```
 
 <!--END_SECTION:waka-->
