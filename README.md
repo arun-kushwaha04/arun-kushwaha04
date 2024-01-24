@@ -59,11 +59,7 @@
  <!--START_SECTION:waka-->
 
 ```txt
-JavaScript   1 hr 9 mins     █████████████░░░░░░░░░░░░   52.40 %
-Kotlin       25 mins         █████░░░░░░░░░░░░░░░░░░░░   19.52 %
-Other        23 mins         ████▒░░░░░░░░░░░░░░░░░░░░   17.41 %
-HTML         9 mins          █▓░░░░░░░░░░░░░░░░░░░░░░░   07.33 %
-Groovy       3 mins          ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.39 %
+No activity tracked
 ```
 
 <!--END_SECTION:waka-->
