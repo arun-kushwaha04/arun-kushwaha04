@@ -59,9 +59,7 @@
  <!--START_SECTION:waka-->
 
 ```txt
-Kotlin       6 mins          ████████████████▒░░░░░░░░   65.88 %
-TypeScript   3 mins          ████████▒░░░░░░░░░░░░░░░░   33.71 %
-XML          0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.41 %
+TypeScript   3 mins          █████████████████████████   100.00 %
 ```
 
 <!--END_SECTION:waka-->
