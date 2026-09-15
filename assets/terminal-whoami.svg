@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="240" viewBox="0 0 880 240" role="img" aria-label="arun@github terminal">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07100d"/>
+      <stop offset="100%" stop-color="#101a16"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.1" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="880" height="240" rx="12" fill="url(#bg)" stroke="#1f3d32" stroke-width="2"/>
+  <rect x="0" y="0" width="880" height="36" rx="12" fill="#15241e"/>
+  <rect x="0" y="24" width="880" height="12" fill="#15241e"/>
+
+  <circle cx="22" cy="18" r="6" fill="#ff5f56"/>
+  <circle cx="42" cy="18" r="6" fill="#ffbd2e"/>
+  <circle cx="62" cy="18" r="6" fill="#27c93f"/>
+
+  <text x="440" y="22" text-anchor="middle" fill="#7aa892" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12">arun@github - zsh - 88x24</text>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="15" filter="url(#glow)">
+    <text x="28" y="72">
+      <tspan fill="#3dd68c">arun@github</tspan><tspan fill="#6b8f7c">:</tspan><tspan fill="#5b8def">~</tspan><tspan fill="#6b8f7c">$</tspan><tspan fill="#e6edf3"> whoami</tspan>
+    </text>
+    <text x="28" y="98" fill="#c9d1d9">software engineer | backend | distributed systems | infrastructure</text>
+
+    <text x="28" y="136">
+      <tspan fill="#3dd68c">arun@github</tspan><tspan fill="#6b8f7c">:</tspan><tspan fill="#5b8def">~</tspan><tspan fill="#6b8f7c">$</tspan><tspan fill="#e6edf3"> cat ~/focus</tspan>
+    </text>
+    <text x="28" y="162" fill="#8bdcad">C++ | Linux | networking | databases | physics-minded debugging</text>
+
+    <text x="28" y="200">
+      <tspan fill="#3dd68c">arun@github</tspan><tspan fill="#6b8f7c">:</tspan><tspan fill="#5b8def">~</tspan><tspan fill="#6b8f7c">$</tspan><tspan fill="#e6edf3"> echo $MOTTO</tspan>
+    </text>
+    <text x="28" y="224" fill="#c9d1d9">understand the system, keep the human in the loop</text>
+  </g>
+</svg>

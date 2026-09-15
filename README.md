@@ -1,33 +1,55 @@
-```text
-arun@github:~$ whoami
-software engineer · backend · systems · infrastructure
-```
+<!--
+  Profile README template: terminal edition.
+  Colors live in ./assets/*.svg because GitHub strips most inline CSS.
+  Dynamic zones: COMMITS and MUSIC marker pairs via scripts/update-readme.mjs.
+-->
+
+<p align="left">
+  <img src="./assets/terminal-whoami.svg" alt="arun@github terminal" width="880" />
+</p>
+
+<br />
+
+<img src="./assets/prompt-about.svg" alt="$ cat ~/bio" width="880" />
 
 ```text
-$ cat ~/about
+I build backend and distributed systems, but the part I like most is
+understanding why things behave the way they do.
 
-building distributed systems.
-breaking abstractions to understand what's underneath.
+That usually pulls me toward C++, Linux, databases, networking, and the
+physics mindset: start from first principles, test the model, measure what
+reality says, then make the system simpler.
 
-interested in:
-  linux · c++ · networking · databases
-  distributed systems · cloud infrastructure · performance
+I like honest tools, calm infrastructure, music while working, and stories
+about getting stronger without losing kindness. Codex and ChatGPT are part
+of that loop for me: thinking partners for slowing down, naming assumptions,
+and keeping the work humane.
 ```
+
+<br />
+
+<img src="./assets/prompt-likes.svg" alt="$ cat ~/likes" width="880" />
+
+<p align="left">
+  <img src="./assets/likes.svg" alt="likes" width="880" />
+</p>
+
+<br />
+
+<img src="./assets/prompt-stack.svg" alt="$ stack --short" width="880" />
 
 ```text
-$ stack --short
-
-languages   →  C++ · TypeScript · Go · Python
-runtime     →  Linux · Node.js
-cloud       →  AWS
-infra       →  Terraform · CDK · Docker · GitHub Actions
-data        →  DynamoDB · MongoDB · ClickHouse · PostgreSQL
-systems     →  SQS · Kinesis · Lambda · API Gateway
+languages   -> C++ | TypeScript | Go | Python
+runtime     -> Linux | Node.js
+cloud       -> AWS
+infra       -> Terraform | CDK | Docker | GitHub Actions
+data        -> DynamoDB | MongoDB | ClickHouse | PostgreSQL
+systems     -> SQS | Kinesis | Lambda | API Gateway
 ```
 
-```text
-$ git log --global --oneline
-```
+<br />
+
+<img src="./assets/prompt-commits.svg" alt="$ git log --global --oneline" width="880" />
 
 <!-- COMMITS:START -->
 <pre>
@@ -41,13 +63,15 @@ $ git log --global --oneline
 </pre>
 <!-- COMMITS:END -->
 
-```text
-$ git status --open-source
+<br />
 
-working on      distributed systems
-learning        C++ · Linux internals
-interested in   databases · runtimes · infra · performance
-status          probably debugging something
+<img src="./assets/prompt-opensource.svg" alt="$ git status --open-source" width="880" />
+
+```text
+working on      distributed systems and backend infrastructure
+learning        C++ | Linux internals | physics of computation
+interested in   databases | runtimes | infra | performance
+status          probably tracing one weird edge case
 ```
 
 <details>
@@ -65,36 +89,30 @@ cloud-infrastructure/
 
 </details>
 
-```text
-$ music --now-playing
-```
+<br />
+
+<img src="./assets/prompt-music.svg" alt="$ music --now-playing" width="880" />
 
 <!-- MUSIC:START -->
-```text
-┌────────────────────────────────────────────────────┐
-│ ♪ NOW PLAYING                                      │
-│                                                    │
-│ Beating Around the Bush — AC/DC                    │
-│                                                    │
-│ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ │
-└────────────────────────────────────────────────────┘
-```
+<p align="left">
+  <img src="./assets/now-playing.svg" alt="now playing" width="520" />
+</p>
 <!-- MUSIC:END -->
 
-<!--
-  Asta pixel-art animation
-  Place a user-owned/licensed GIF at: assets/asta.gif
-  Until then this image is optional and may not render.
--->
-<div align="center">
-  <img src="./assets/asta.gif" width="400" alt="Asta pixel art" />
+<br />
+
+<!-- Place user-owned/licensed GIF at: assets/asta.gif -->
+<p align="center">
+  <img src="./assets/asta.gif" width="360" alt="Asta pixel art" />
   <br />
-  <sub><code>surpass your limits.</code></sub>
-</div>
+  <code>surpass your limits.</code>
+</p>
+
+<br />
+
+<img src="./assets/prompt-philosophy.svg" alt="$ cat ~/philosophy" width="880" />
 
 ```text
-$ cat ~/philosophy
-
 understand > memorize
 measure    > assume
 simple     > clever

@@ -2,8 +2,9 @@ name: Update profile README
 
 on:
   schedule:
-    # every 6 hours
-    - cron: "0 */6 * * *"
+    # Fastest GitHub Actions supports for scheduled workflows.
+    # A literal every-minute cron ("* * * * *") will not run every minute here.
+    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 concurrency:
@@ -15,7 +16,7 @@ permissions:
 
 jobs:
   update:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -35,12 +36,12 @@ jobs:
 
       - name: Commit and push if changed
         run: |
-          if git diff --quiet README.md; then
-            echo "No README changes"
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
+          git add README.md assets/now-playing.svg
+          if git diff --cached --quiet; then
+            echo "No README / music card changes"
+            exit 0
+          fi
           git commit -m "chore: update profile activity [skip ci]"
           git push

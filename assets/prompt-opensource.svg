@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="40" viewBox="0 0 880 40">
+  <rect width="880" height="40" rx="6" fill="#0b1210" stroke="#1f3d32"/>
+  <text x="16" y="26" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="14">
+    <tspan fill="#3dd68c">$</tspan><tspan fill="#c9d1d9"> git status --open-source</tspan>
+  </text>
+</svg>

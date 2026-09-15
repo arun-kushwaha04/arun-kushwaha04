@@ -19,11 +19,16 @@
  * Get an API key at https://www.last.fm/api/account/create (free).
  */
 
-import { readFileSync, writeFileSync } from "node:fs";
-import { resolve } from "node:path";
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { resolve, dirname } from "node:path";
+import { fileURLToPath } from "node:url";
 
 const COMMIT_LIMIT = Number(process.env.COMMIT_LIMIT || 7);
 const README_PATH = resolve(process.env.README_PATH || "README.md");
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const NOW_PLAYING_SVG = resolve(
+  process.env.NOW_PLAYING_SVG || `${ROOT}/assets/now-playing.svg`,
+);
 const OWNER =
   process.env.GITHUB_REPOSITORY_OWNER ||
   process.env.GITHUB_ACTOR ||
@@ -37,8 +42,6 @@ const COMMITS_START = "<!-- COMMITS:START -->";
 const COMMITS_END = "<!-- COMMITS:END -->";
 const MUSIC_START = "<!-- MUSIC:START -->";
 const MUSIC_END = "<!-- MUSIC:END -->";
-
-const BOX_WIDTH = 50;
 
 function fail(message) {
   console.error(`error: ${message}`);
@@ -65,14 +68,66 @@ function escapeAttr(text) {
     .replace(/>/g, "&gt;");
 }
 
+function escapeXml(text) {
+  return String(text)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
 function pad(str, width) {
   const s = String(str);
   if (s.length >= width) return s.slice(0, width);
   return s + " ".repeat(width - s.length);
 }
 
-function boxLine(inner, width = BOX_WIDTH) {
-  return `│ ${pad(inner, width)} │`;
+function truncate(str, max) {
+  const s = String(str);
+  if (s.length <= max) return s;
+  return `${s.slice(0, Math.max(0, max - 1))}…`;
+}
+
+function pickLastfmImage(images) {
+  if (!Array.isArray(images)) return "";
+  const bySize = Object.fromEntries(
+    images.map((img) => [img?.size, img?.["#text"] || ""]),
+  );
+  return (
+    bySize.extralarge ||
+    bySize.large ||
+    bySize.medium ||
+    bySize.small ||
+    ""
+  );
+}
+
+async function fetchCoverDataUri(imageUrl) {
+  if (!imageUrl) return null;
+  try {
+    const res = await fetch(imageUrl, {
+      headers: { "User-Agent": "profile-readme-updater" },
+    });
+    if (!res.ok) {
+      console.warn(`warn: cover fetch HTTP ${res.status}`);
+      return null;
+    }
+    const ctype = (res.headers.get("content-type") || "image/jpeg").split(";")[0];
+    if (!ctype.startsWith("image/")) {
+      console.warn(`warn: cover content-type not image: ${ctype}`);
+      return null;
+    }
+    const buf = Buffer.from(await res.arrayBuffer());
+    if (buf.length < 32 || buf.length > 2_500_000) {
+      console.warn(`warn: cover size odd (${buf.length} bytes)`);
+      return null;
+    }
+    return `data:${ctype};base64,${buf.toString("base64")}`;
+  } catch (err) {
+    console.warn(`warn: cover fetch failed: ${err.message || err}`);
+    return null;
+  }
 }
 
 async function githubFetch(path, { accept = "application/vnd.github+json", soft = false } = {}) {
@@ -270,50 +325,104 @@ async function fetchLastfmTrack() {
     typeof first.artist === "string"
       ? first.artist
       : first.artist?.["#text"] || "Unknown artist";
+  const album =
+    typeof first.album === "string"
+      ? first.album
+      : first.album?.["#text"] || "";
   const nowPlaying = first?.["@attr"]?.nowplaying === "true";
+  const imageUrl = pickLastfmImage(first.image);
+  const coverDataUri = await fetchCoverDataUri(imageUrl);
+  const trackUrl = first.url || "";
 
   return {
     status: "ok",
     nowPlaying,
-    name: sanitizeMarkdown(name),
-    artist: sanitizeMarkdown(artist),
+    name: String(name).split("\n")[0].trim(),
+    artist: String(artist).split("\n")[0].trim(),
+    album: String(album).split("\n")[0].trim(),
+    coverDataUri,
+    trackUrl,
+    imageUrl,
   };
 }
 
-function renderMusic(track) {
-  const width = BOX_WIDTH;
-  const top = `┌${"─".repeat(width + 2)}┐`;
-  const bot = `└${"─".repeat(width + 2)}┘`;
-  const bar = "━".repeat(width);
+function buildNowPlayingSvg(track) {
+  const mono =
+    "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace";
+  let label = "♪ MUSIC";
+  let title = "waiting for last.fm…";
+  let artist = "set LASTFM_USERNAME + LASTFM_API_KEY";
+  let album = "";
+  let coverHref = null;
 
-  let title;
-  let body;
-
-  if (track.status === "unconfigured") {
-    title = "♪ music";
-    body = [
-      "waiting for last.fm scrobbles…",
-      "set LASTFM_USERNAME + LASTFM_API_KEY to enable",
-    ];
-  } else if (track.status === "empty") {
-    title = "♪ recently played";
-    body = ["no recent scrobbles"];
-  } else {
-    title = track.nowPlaying ? "♪ NOW PLAYING" : "♪ RECENTLY PLAYED";
-    body = [`${track.name} — ${track.artist}`];
+  if (track.status === "empty") {
+    label = "♪ RECENTLY PLAYED";
+    title = "no recent scrobbles";
+    artist = "queue something on youtube music";
+  } else if (track.status === "ok") {
+    label = track.nowPlaying ? "♪ NOW PLAYING" : "♪ RECENTLY PLAYED";
+    title = truncate(track.name || "Unknown track", 42);
+    artist = truncate(track.artist || "Unknown artist", 42);
+    album = truncate(track.album || "", 42);
+    coverHref = track.coverDataUri;
   }
 
-  const lines = [
-    top,
-    boxLine(title, width),
-    boxLine("", width),
-    ...body.map((b) => boxLine(b, width)),
-    boxLine("", width),
-    boxLine(bar, width),
-    bot,
-  ];
+  const cover = coverHref
+    ? `<image href="${coverHref}" xlink:href="${coverHref}" x="20" y="48" width="96" height="96" preserveAspectRatio="xMidYMid slice" clip-path="url(#coverClip)"/>
+       <rect x="20" y="48" width="96" height="96" rx="8" fill="none" stroke="#2a4a3c" stroke-width="1.5"/>`
+    : `<rect x="20" y="48" width="96" height="96" rx="8" fill="#15241e" stroke="#2a4a3c" stroke-width="1.5"/>
+       <text x="68" y="102" text-anchor="middle" fill="#3dd68c" font-family="${mono}" font-size="28">♪</text>`;
 
-  return ["```text", ...lines, "```"].join("\n");
+  const albumLine = album
+    ? `<text x="136" y="128" fill="#7aa892" font-family="${mono}" font-size="12">${escapeXml(album)}</text>`
+    : "";
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="520" height="168" viewBox="0 0 520 168" role="img" aria-label="${escapeXml(label)}: ${escapeXml(title)} — ${escapeXml(artist)}">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1210"/>
+      <stop offset="100%" stop-color="#101a16"/>
+    </linearGradient>
+    <clipPath id="coverClip">
+      <rect x="20" y="48" width="96" height="96" rx="8"/>
+    </clipPath>
+  </defs>
+  <rect width="520" height="168" rx="12" fill="url(#bg)" stroke="#1f3d32" stroke-width="2"/>
+  <rect x="0" y="0" width="520" height="32" rx="12" fill="#15241e"/>
+  <rect x="0" y="20" width="520" height="12" fill="#15241e"/>
+  <circle cx="18" cy="16" r="5" fill="#ff5f56"/>
+  <circle cx="34" cy="16" r="5" fill="#ffbd2e"/>
+  <circle cx="50" cy="16" r="5" fill="#27c93f"/>
+  <text x="260" y="20" text-anchor="middle" fill="#7aa892" font-family="${mono}" font-size="11">music — last.fm</text>
+
+  ${cover}
+
+  <text x="136" y="64" fill="#3dd68c" font-family="${mono}" font-size="12">${escapeXml(label)}</text>
+  <text x="136" y="92" fill="#e6edf3" font-family="${mono}" font-size="16" font-weight="600">${escapeXml(title)}</text>
+  <text x="136" y="114" fill="#8bdcad" font-family="${mono}" font-size="13">${escapeXml(artist)}</text>
+  ${albumLine}
+
+  <rect x="136" y="146" width="360" height="4" rx="2" fill="#1f3d32"/>
+  <rect x="136" y="146" width="${track.status === "ok" && track.nowPlaying ? 220 : 120}" height="4" rx="2" fill="#3dd68c"/>
+</svg>
+`;
+}
+
+function renderMusicBlock() {
+  // Stable README markup; visual content lives in assets/now-playing.svg
+  return `<p align="left">
+  <img src="./assets/now-playing.svg" alt="now playing" width="520" />
+</p>`;
+}
+
+function writeIfChanged(path, content) {
+  if (existsSync(path)) {
+    const prev = readFileSync(path, "utf8");
+    if (prev === content) return false;
+  }
+  writeFileSync(path, content, "utf8");
+  return true;
 }
 
 function replaceMarkedSection(readme, start, end, content) {
@@ -357,8 +466,11 @@ async function main() {
   const commitsBlock = renderCommitsBlock(commits);
 
   const track = await fetchLastfmTrack();
-  console.log(`music: ${track.status}${track.name ? ` — ${track.name}` : ""}`);
-  const musicBlock = renderMusic(track);
+  console.log(
+    `music: ${track.status}${track.name ? ` — ${track.name} / ${track.artist}` : ""}${track.coverDataUri ? " (cover)" : ""}`,
+  );
+  const musicSvg = buildNowPlayingSvg(track);
+  const musicBlock = renderMusicBlock();
 
   let next = replaceMarkedSection(
     readme,
@@ -368,22 +480,33 @@ async function main() {
   );
   next = replaceMarkedSection(next, MUSIC_START, MUSIC_END, musicBlock);
 
-  if (next === readme) {
-    console.log("README unchanged — skipping write");
+  const readmeChanged = next !== readme;
+  const svgChanged = DRY_RUN
+    ? musicSvg !== (existsSync(NOW_PLAYING_SVG) ? readFileSync(NOW_PLAYING_SVG, "utf8") : "")
+    : writeIfChanged(NOW_PLAYING_SVG, musicSvg);
+
+  if (!readmeChanged && !svgChanged) {
+    console.log("README + now-playing.svg unchanged — skipping write");
     return;
   }
 
   if (DRY_RUN) {
     console.log("--- commits ---");
     console.log(commitsBlock);
-    console.log("--- music ---");
+    console.log("--- music block ---");
     console.log(musicBlock);
-    console.log("DRY_RUN=1 — not writing README");
+    console.log(`--- svg would ${svgChanged ? "change" : "stay"} (${NOW_PLAYING_SVG}) ---`);
+    console.log("DRY_RUN=1 — not writing");
     return;
   }
 
-  writeFileSync(README_PATH, next, "utf8");
-  console.log(`updated ${README_PATH}`);
+  if (readmeChanged) {
+    writeFileSync(README_PATH, next, "utf8");
+    console.log(`updated ${README_PATH}`);
+  }
+  if (svgChanged) {
+    console.log(`updated ${NOW_PLAYING_SVG}`);
+  }
 }
 
 main().catch((err) => {
