@@ -4,7 +4,7 @@ on:
   schedule:
     # Fastest GitHub Actions supports for scheduled workflows.
     # A literal every-minute cron ("* * * * *") will not run every minute here.
-    - cron: "*/5 * * * *"
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 concurrency:
