@@ -31,13 +31,13 @@ $ git log --global --oneline
 
 <!-- COMMITS:START -->
 <pre>
+<a href="https://github.com/arun-kushwaha04/arun-kushwaha04/commit/dae0b3c40215060e07b789751a244ed7b67405db"><code>dae0b3c</code></a>  update readme                                 <i>arun-kushwaha04/arun-kushwaha04</i>
 <a href="https://github.com/arun-kushwaha04/arun-kushwaha04/commit/4884db16d3dd67ae72b872d4ab968aa95139e399"><code>4884db1</code></a>  update readme                                 <i>arun-kushwaha04/arun-kushwaha04</i>
 <a href="https://github.com/moov-io/fincen/commit/66d4b613a8e202f5c523391252894a33f8381e01"><code>66d4b61</code></a>  Generate attribuites                          <i>moov-io/fincen</i>
 <a href="https://github.com/moov-io/fincen/commit/6254f373c38a002c726e5b0cb0680a14c23c4129"><code>6254f37</code></a>  Update pkg/suspicious_activity/activity.go    <i>moov-io/fincen</i>
 <a href="https://github.com/moov-io/fincen/commit/f2e500ad5be4737be7843e2c67ccfc7458b87252"><code>f2e500a</code></a>  Update pkg/suspicious_activity/activity.go    <i>moov-io/fincen</i>
 <a href="https://github.com/moov-io/fincen/commit/14f8fe46b015f2454ad500f2d03eebe1d8d28731"><code>14f8fe4</code></a>  feat: Update PartyIdentification validation…  <i>moov-io/fincen</i>
 <a href="https://github.com/arun-kushwaha04/go-crud-api/commit/d6394ba919e66dcf3461813050af08a01147257e"><code>d6394ba</code></a>  added endpoints for crud operations           <i>arun-kushwaha04/go-crud-api</i>
-<a href="https://github.com/arun-kushwaha04/go-crud-api/commit/5ad0ed7712edabf45ea4ae24774cbf4f36980696"><code>5ad0ed7</code></a>  storage integration for create api            <i>arun-kushwaha04/go-crud-api</i>
 </pre>
 <!-- COMMITS:END -->
 
@@ -72,10 +72,9 @@ $ music --now-playing
 <!-- MUSIC:START -->
 ```text
 ┌────────────────────────────────────────────────────┐
-│ ♪ music                                            │
+│ ♪ NOW PLAYING                                      │
 │                                                    │
-│ waiting for last.fm scrobbles…                     │
-│ set LASTFM_USERNAME + LASTFM_API_KEY to enable     │
+│ Beating Around the Bush — AC/DC                    │
 │                                                    │
 │ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ │
 └────────────────────────────────────────────────────┘
