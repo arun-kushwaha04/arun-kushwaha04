@@ -1,87 +1,108 @@
-### <h1 align="center">Hi <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">, myself Arun Singh Kushwaha
-
- ## 🙋‍♂️ About Me
-
-
-- 🌱 I’m currently learning **Ktor**
- 
-- 🔥 I'm also improving my **DSA** and promblem solving skills.
-
-- 👯 I’m looking to collaborate on **OpenSource Projects**
-
-- 📫 How to reach me **arunkushwaha89765@gmail.com**
-
- ##### <h3 align="center"> Android Development Enthusiast || Web Development Enthusiast </h3>
- <br>
- <h2 align="center">My Skills</h2>
- <p align="center"> 
-    <a href="https://reactjs.org/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/react-native.png"/> </a> 
-    <a href="https://developer.android.com/kotlin?gclid=CjwKCAjwieuGBhAsEiwA1Ly_nW2ZuKGIiJsDsmbeKVlBy5SyqUpNT9FL2kwL7HN3j2puwgnv9c-OABoCAaIQAvD_BwE&gclsrc=aw.ds" target="_blank"> <img src="https://cdn.worldvectorlogo.com/logos/kotlin-1.svg" width="40" height="40"/> </a>  
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://img.icons8.com/color/48/000000/javascript.png"/> </a> 
-    <a href="https://www.w3.org/html/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/html-5.png"/> </a> 
-    <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/css3.png"/> </a> 
-    <a style="padding-right:8px;" href="https://nodejs.org" target="_blank"> <img src="https://img.icons8.com/color/48/000000/nodejs.png"/> </a> 
-    <a style="padding-right:8px;" href="https://www.mysql.com/" target="_blank"> <img src="https://img.icons8.com/fluent/50/000000/mysql-logo.png"/> </a>
-  <a style="padding-right:8px;" href="https://www.postgresql.org/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg" width="40" height="40"/> </a>
-    <a href="" target="_blank"> <img src="https://cdn.worldvectorlogo.com/logos/c.svg" alt="express" width="40" height="40"/> </a>
-  <a href="" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="express" width="40" height="40"/> </a>
-    <a href="https://firebase.google.com/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/firebase.png"/> </a> 
-    <a href="https://git-scm.com/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/git.png"/> </a> 
-  <a href="https://www.figma.com/" target="_blank"> <img src="https://cdn.worldvectorlogo.com/logos/figma-1.svg" width="40" height="40"/> </a>  
-</p>
-
-
- <p align="center">
-    <a href="https://github.com/arun-kushwaha04/github-readme-streak-stats">
-        <img title="🔥 Get streak stats for your profile at git.io/streak-stats" alt="arun-kushwaha04's streak" src="https://github-readme-streak-stats.herokuapp.com/?user=arun-kushwaha04&theme=black-ice&hide_border=true&stroke=0000&background=060A0CD0"/>
-    </a>
-</p>
- 
-<div align="center">
- 
-# 📊 My Github Stats
-
-  <br/>
-    <a href="https://github.com/arun-kushwaha04/github-readme-stats"><img alt="Arun Kushwaha's Github Stats" src="https://github-readme-stats.vercel.app/api?username=arun-kushwaha04&show_icons=true&count_private=true&theme=react&hide_border=true&bg_color=0D1117" /></a>
-  <a href="https://github.com/arun-kushwaha04/github-readme-stats"><img alt="Arun Kushwaha's Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=arun-kushwaha04&langs_count=8&count_private=true&layout=compact&theme=react&hide_border=true&bg_color=0D1117" /></a>
-  <br/>
-  <b>Note:</b> Top languages is only a metric of the languages my public code consists of and doesn't reflect experience or skill level.
-
-
-<br/>
-<br/>
-
-<a href="https://github.com/arun-kushwaha04/github-readme-activity-graph"><img alt="Arun Kushwaha's Activity Graph" src="https://activity-graph.herokuapp.com/graph?username=arun-kushwaha04&bg_color=0D1117&color=5BCDEC&line=5BCDEC&point=FFFFFF&hide_border=true" /></a>
-
- ![trophy](https://github-profile-trophy.vercel.app/?username=arun-kushwaha04&row=1&no-bg=true)
-
- ### 👨‍💻 Where I spent time on this week
- <!--START_SECTION:waka-->
-
-```txt
-No activity tracked
+```text
+arun@github:~$ whoami
+software engineer · backend · systems · infrastructure
 ```
 
-<!--END_SECTION:waka-->
- 
-<br/>
-<br/>
+```text
+$ cat ~/about
 
-## Connect with me:
-<p align="left">
+building distributed systems.
+breaking abstractions to understand what's underneath.
 
-<a href = "https://www.linkedin.com/in/arun-singh-kushwaha-087652207/"><img src="https://img.icons8.com/fluent/48/000000/linkedin.png"/></a>
-<a href = "https://www.facebook.com/profile.php?id=100057356125529"><img src="https://img.icons8.com/fluent/48/000000/facebook-new.png"/></a>
+interested in:
+  linux · c++ · networking · databases
+  distributed systems · cloud infrastructure · performance
+```
 
+```text
+$ stack --short
 
-</p>
- 
-## ❤ Views and Followers
-<a href="https://github.com/arun-kushwaha04?tab=followers"><img src="https://img.shields.io/github/followers/arun-kushwaha04?label=Followers&style=social" alt="GitHub Badge"></a>   ![Profile views](https://gpvc.arturio.dev/arun-kushwaha04)  
+languages   →  C++ · TypeScript · Go · Python
+runtime     →  Linux · Node.js
+cloud       →  AWS
+infra       →  Terraform · CDK · Docker · GitHub Actions
+data        →  DynamoDB · MongoDB · ClickHouse · PostgreSQL
+systems     →  SQS · Kinesis · Lambda · API Gateway
+```
 
- 
- 
- 
-  ## ✨ To see my React projects, click <a href="https://github.com/arun-kushwaha04/React-Project.git">here</a> ✨</p>
-  
-<!--  ![Profile views](https://gpvc.arturio.dev/arun-kushwaha04)   -->
+```text
+$ git log --global --oneline
+```
+
+<!-- COMMITS:START -->
+<pre>
+<a href="https://github.com/moov-io/fincen/commit/66d4b613a8e202f5c523391252894a33f8381e01"><code>66d4b61</code></a>  Generate attribuites                          <i>moov-io/fincen</i>
+<a href="https://github.com/moov-io/fincen/commit/6254f373c38a002c726e5b0cb0680a14c23c4129"><code>6254f37</code></a>  Update pkg/suspicious_activity/activity.go    <i>moov-io/fincen</i>
+<a href="https://github.com/moov-io/fincen/commit/f2e500ad5be4737be7843e2c67ccfc7458b87252"><code>f2e500a</code></a>  Update pkg/suspicious_activity/activity.go    <i>moov-io/fincen</i>
+<a href="https://github.com/moov-io/fincen/commit/14f8fe46b015f2454ad500f2d03eebe1d8d28731"><code>14f8fe4</code></a>  feat: Update PartyIdentification validation…  <i>moov-io/fincen</i>
+<a href="https://github.com/arun-kushwaha04/go-crud-api/commit/d6394ba919e66dcf3461813050af08a01147257e"><code>d6394ba</code></a>  added endpoints for crud operations           <i>arun-kushwaha04/go-crud-api</i>
+<a href="https://github.com/arun-kushwaha04/go-crud-api/commit/5ad0ed7712edabf45ea4ae24774cbf4f36980696"><code>5ad0ed7</code></a>  storage integration for create api            <i>arun-kushwaha04/go-crud-api</i>
+<a href="https://github.com/arun-kushwaha04/go-crud-api/commit/e3da1565e7f3db34b5ef5951c9daaa272a32b7a6"><code>e3da156</code></a>  handlers and request validation for create …  <i>arun-kushwaha04/go-crud-api</i>
+</pre>
+<!-- COMMITS:END -->
+
+```text
+$ git status --open-source
+
+working on      distributed systems
+learning        C++ · Linux internals
+interested in   databases · runtimes · infra · performance
+status          probably debugging something
+```
+
+<details>
+<summary><code>$ ls ~/open-source</code></summary>
+
+```text
+linux/
+cpp/
+distributed-systems/
+databases/
+developer-tools/
+observability/
+cloud-infrastructure/
+```
+
+</details>
+
+```text
+$ music --now-playing
+```
+
+<!-- MUSIC:START -->
+```text
+┌────────────────────────────────────────────────────┐
+│ ♪ music                                            │
+│                                                    │
+│ waiting for last.fm scrobbles…                     │
+│ set LASTFM_USERNAME + LASTFM_API_KEY to enable     │
+│                                                    │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ │
+└────────────────────────────────────────────────────┘
+```
+<!-- MUSIC:END -->
+
+<!--
+  Asta pixel-art animation
+  Place a user-owned/licensed GIF at: assets/asta.gif
+  Until then this image is optional and may not render.
+-->
+<div align="center">
+  <img src="./assets/asta.gif" width="400" alt="Asta pixel art" />
+  <br />
+  <sub><code>surpass your limits.</code></sub>
+</div>
+
+```text
+$ cat ~/philosophy
+
+understand > memorize
+measure    > assume
+simple     > clever
+debug      > guess
+
+$ echo $STATUS
+still learning.
+
+$ _
+```
