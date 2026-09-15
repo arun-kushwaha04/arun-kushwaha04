@@ -95,7 +95,7 @@ cloud-infrastructure/
 
 <!-- MUSIC:START -->
 <p align="left">
-  <img src="./assets/now-playing.svg?v=b2t8bm93fE5vIEludH" alt="now playing" width="520" />
+  <img src="./assets/now-playing.svg?v=b2t8bm93fFNwcmludG" alt="now playing" width="520" />
 </p>
 <!-- MUSIC:END -->
 
