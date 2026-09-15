@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="520" height="168" viewBox="0 0 520 168" role="img" aria-label="music card placeholder">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="520" height="168" viewBox="0 0 520 168" role="img" aria-label="♪ NOW PLAYING: Secrets — Talha Anjum and Umair">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0b1210"/>
       <stop offset="100%" stop-color="#101a16"/>
     </linearGradient>
+    <clipPath id="coverClip">
+      <rect x="20" y="48" width="96" height="96" rx="8"/>
+    </clipPath>
   </defs>
   <rect width="520" height="168" rx="12" fill="url(#bg)" stroke="#1f3d32" stroke-width="2"/>
   <rect x="0" y="0" width="520" height="32" rx="12" fill="#15241e"/>
@@ -12,12 +15,16 @@
   <circle cx="18" cy="16" r="5" fill="#ff5f56"/>
   <circle cx="34" cy="16" r="5" fill="#ffbd2e"/>
   <circle cx="50" cy="16" r="5" fill="#27c93f"/>
-  <text x="260" y="20" text-anchor="middle" fill="#7aa892" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11">music - last.fm</text>
+  <text x="260" y="20" text-anchor="middle" fill="#7aa892" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11">music — last.fm</text>
+
   <rect x="20" y="48" width="96" height="96" rx="8" fill="#15241e" stroke="#2a4a3c" stroke-width="1.5"/>
-  <text x="68" y="103" text-anchor="middle" fill="#3dd68c" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="24">fm</text>
-  <text x="136" y="64" fill="#3dd68c" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12">MUSIC</text>
-  <text x="136" y="92" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="16" font-weight="600">waiting for last.fm...</text>
-  <text x="136" y="114" fill="#8bdcad" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13">workflow will update this card</text>
+       <text x="68" y="102" text-anchor="middle" fill="#3dd68c" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="28">♪</text>
+
+  <text x="136" y="64" fill="#3dd68c" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12">♪ NOW PLAYING</text>
+  <text x="136" y="92" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="16" font-weight="600">Secrets</text>
+  <text x="136" y="114" fill="#8bdcad" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13">Talha Anjum and Umair</text>
+  
+
   <rect x="136" y="146" width="360" height="4" rx="2" fill="#1f3d32"/>
-  <rect x="136" y="146" width="120" height="4" rx="2" fill="#3dd68c"/>
+  <rect x="136" y="146" width="220" height="4" rx="2" fill="#3dd68c"/>
 </svg>
