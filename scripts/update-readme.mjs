@@ -330,6 +330,7 @@ async function fetchLastfmTrack() {
       ? first.album
       : first.album?.["#text"] || "";
   const nowPlaying = first?.["@attr"]?.nowplaying === "true";
+  const playedAt = first.date?.uts || "";
   const imageUrl = pickLastfmImage(first.image);
   const coverDataUri = await fetchCoverDataUri(imageUrl);
   const trackUrl = first.url || "";
@@ -340,6 +341,7 @@ async function fetchLastfmTrack() {
     name: String(name).split("\n")[0].trim(),
     artist: String(artist).split("\n")[0].trim(),
     album: String(album).split("\n")[0].trim(),
+    playedAt: String(playedAt).trim(),
     coverDataUri,
     trackUrl,
     imageUrl,
@@ -409,10 +411,23 @@ function buildNowPlayingSvg(track) {
 `;
 }
 
-function renderMusicBlock() {
-  // Stable README markup; visual content lives in assets/now-playing.svg
+function musicCacheKey(track) {
+  const data = [
+    track.status || "",
+    track.nowPlaying ? "now" : "recent",
+    track.name || "",
+    track.artist || "",
+    track.album || "",
+    track.playedAt || "",
+  ].join("|");
+  return Buffer.from(data).toString("base64url").slice(0, 18) || "lastfm";
+}
+
+function renderMusicBlock(track) {
+  // Keep the SVG external, but version the URL so GitHub/browser caches refresh on track changes.
+  const version = musicCacheKey(track);
   return `<p align="left">
-  <img src="./assets/now-playing.svg" alt="now playing" width="520" />
+  <img src="./assets/now-playing.svg?v=${version}" alt="now playing" width="520" />
 </p>`;
 }
 
@@ -470,7 +485,7 @@ async function main() {
     `music: ${track.status}${track.name ? ` — ${track.name} / ${track.artist}` : ""}${track.coverDataUri ? " (cover)" : ""}`,
   );
   const musicSvg = buildNowPlayingSvg(track);
-  const musicBlock = renderMusicBlock();
+  const musicBlock = renderMusicBlock(track);
 
   let next = replaceMarkedSection(
     readme,
