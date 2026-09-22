@@ -53,12 +53,12 @@ systems     -> SQS | Kinesis | Lambda | API Gateway
 
 <!-- COMMITS:START -->
 <pre>
+<a href="https://github.com/arun-kushwaha04/arun-kushwaha04/commit/dae0b3c40215060e07b789751a244ed7b67405db"><code>dae0b3c</code></a>  update readme                                 <i>arun-kushwaha04/arun-kushwaha04</i>
+<a href="https://github.com/arun-kushwaha04/arun-kushwaha04/commit/21086b75f064f0f491844f149fd66b14479fdfa1"><code>21086b7</code></a>  fix: bust music card cache on track change    <i>arun-kushwaha04/arun-kushwaha04</i>
 <a href="https://github.com/arun-kushwaha04/arun-kushwaha04/commit/c3008306170e8340a9e6aeea05423d812b8c226b"><code>c300830</code></a>  chore: use arm runner for README updater      <i>arun-kushwaha04/arun-kushwaha04</i>
 <a href="https://github.com/arun-kushwaha04/arun-kushwaha04/commit/4884db16d3dd67ae72b872d4ab968aa95139e399"><code>4884db1</code></a>  update readme                                 <i>arun-kushwaha04/arun-kushwaha04</i>
 <a href="https://github.com/arun-kushwaha04/arun-kushwaha04/commit/e799e411714803753383ff8b3ff583b677f7e25a"><code>e799e41</code></a>  updae                                         <i>arun-kushwaha04/arun-kushwaha04</i>
 <a href="https://github.com/arun-kushwaha04/arun-kushwaha04/commit/350be0f97a2c4bb4a8dd58d0b297f8f7ec88179d"><code>350be0f</code></a>  update readme                                 <i>arun-kushwaha04/arun-kushwaha04</i>
-<a href="https://github.com/arun-kushwaha04/arun-kushwaha04/commit/21086b75f064f0f491844f149fd66b14479fdfa1"><code>21086b7</code></a>  fix: bust music card cache on track change    <i>arun-kushwaha04/arun-kushwaha04</i>
-<a href="https://github.com/arun-kushwaha04/arun-kushwaha04/commit/dae0b3c40215060e07b789751a244ed7b67405db"><code>dae0b3c</code></a>  update readme                                 <i>arun-kushwaha04/arun-kushwaha04</i>
 <a href="https://github.com/moov-io/fincen/commit/66d4b613a8e202f5c523391252894a33f8381e01"><code>66d4b61</code></a>  Generate attribuites                          <i>moov-io/fincen</i>
 </pre>
 <!-- COMMITS:END -->
@@ -95,7 +95,7 @@ cloud-infrastructure/
 
 <!-- MUSIC:START -->
 <p align="left">
-  <img src="./assets/now-playing.svg?v=b2t8bm93fFNwcmludG" alt="now playing" width="520" />
+  <img src="./assets/now-playing.svg?v=b2t8bm93fEJlIE15IE" alt="now playing" width="520" />
 </p>
 <!-- MUSIC:END -->
 
